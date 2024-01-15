@@ -5,7 +5,7 @@ help: ## Print this help message
 DFILES=$(wildcard *.dockerfile)
 
 $(DFILES): ## Build any dbimage by its `.dockerfile` name
-	docker build -t dbtrento/$(basename $@) -f $@ .
+	docker build --platform=linux/arm64 -t dbtrento/$(basename $@) -f $@ .
 
 # Images with deps
 gremlin-2to3.dockerfile: gremlin-neo4j.dockerfile

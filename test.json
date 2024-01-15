@@ -1,0 +1,9 @@
+{
+  "datasets": [
+     "freebase_small.json"
+  ],
+   "queries": [
+      "count-edges.groovy",
+      "count-nodes.groovy"
+  ]
+}
